@@ -17,6 +17,10 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+//Greeting Endpoint
 $router->get('greeting', function () {
     return 'Hello World';
 });
+
+//External API Endpoint
+$router->get('fish', 'ExternalAPIController@index');
